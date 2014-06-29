@@ -214,6 +214,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Junya Hayashi";
 				TargetAttributes = {
+					B373ABF2195FE15700BC1F15 = {
+						DevelopmentTeam = Q9BSHZ57N6;
+					};
 					B373AC1B195FE15700BC1F15 = {
 						TestTargetID = B373ABF2195FE15700BC1F15;
 					};
@@ -393,10 +396,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "werewolf/werewolf-Prefix.pch";
 				INFOPLIST_FILE = "werewolf/werewolf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,10 +412,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "werewolf/werewolf-Prefix.pch";
 				INFOPLIST_FILE = "werewolf/werewolf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
