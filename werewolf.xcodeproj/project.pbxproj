@@ -25,6 +25,8 @@
 		B373AC21195FE15700BC1F15 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B373ABFC195FE15700BC1F15 /* CoreData.framework */; };
 		B373AC29195FE15700BC1F15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B373AC27195FE15700BC1F15 /* InfoPlist.strings */; };
 		B373AC2B195FE15700BC1F15 /* werewolfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B373AC2A195FE15700BC1F15 /* werewolfTests.m */; };
+		B373AC3619601D9400BC1F15 /* WWTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B373AC3519601D9400BC1F15 /* WWTopViewController.m */; };
+		B373AC3819601ED700BC1F15 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B373AC3719601ED700BC1F15 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		B373AC26195FE15700BC1F15 /* werewolfTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "werewolfTests-Info.plist"; sourceTree = "<group>"; };
 		B373AC28195FE15700BC1F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B373AC2A195FE15700BC1F15 /* werewolfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = werewolfTests.m; sourceTree = "<group>"; };
+		B373AC3419601D9400BC1F15 /* WWTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTopViewController.h; sourceTree = "<group>"; };
+		B373AC3519601D9400BC1F15 /* WWTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTopViewController.m; sourceTree = "<group>"; };
+		B373AC3719601ED700BC1F15 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../github/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B373ABF9195FE15700BC1F15 /* CoreGraphics.framework in Frameworks */,
+				B373AC3819601ED700BC1F15 /* FacebookSDK.framework in Frameworks */,
 				B373ABFD195FE15700BC1F15 /* CoreData.framework in Frameworks */,
 				B373ABFB195FE15700BC1F15 /* UIKit.framework in Frameworks */,
 				B373ABF7195FE15700BC1F15 /* Foundation.framework in Frameworks */,
@@ -111,6 +117,7 @@
 		B373ABF5195FE15700BC1F15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B373AC3719601ED700BC1F15 /* FacebookSDK.framework */,
 				B373ABF6195FE15700BC1F15 /* Foundation.framework */,
 				B373ABF8195FE15700BC1F15 /* CoreGraphics.framework */,
 				B373ABFA195FE15700BC1F15 /* UIKit.framework */,
@@ -126,6 +133,8 @@
 				B373AC07195FE15700BC1F15 /* WWAppDelegate.h */,
 				B373AC08195FE15700BC1F15 /* WWAppDelegate.m */,
 				B373AC0A195FE15700BC1F15 /* Main.storyboard */,
+				B373AC3419601D9400BC1F15 /* WWTopViewController.h */,
+				B373AC3519601D9400BC1F15 /* WWTopViewController.m */,
 				B373AC10195FE15700BC1F15 /* WWMasterViewController.h */,
 				B373AC11195FE15700BC1F15 /* WWMasterViewController.m */,
 				B373AC13195FE15700BC1F15 /* WWDetailViewController.h */,
@@ -271,6 +280,7 @@
 				B373AC12195FE15700BC1F15 /* WWMasterViewController.m in Sources */,
 				B373AC0F195FE15700BC1F15 /* werewolf.xcdatamodeld in Sources */,
 				B373AC09195FE15700BC1F15 /* WWAppDelegate.m in Sources */,
+				B373AC3619601D9400BC1F15 /* WWTopViewController.m in Sources */,
 				B373AC05195FE15700BC1F15 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +408,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/junya/work/github/facebook-ios-sdk/build",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "werewolf/werewolf-Prefix.pch";
 				INFOPLIST_FILE = "werewolf/werewolf-Info.plist";
@@ -414,6 +428,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/junya/work/github/facebook-ios-sdk/build",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "werewolf/werewolf-Prefix.pch";
 				INFOPLIST_FILE = "werewolf/werewolf-Info.plist";
