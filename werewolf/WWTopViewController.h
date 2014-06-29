@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface WWTopViewController : UIViewController
+
+@interface WWTopViewController : UIViewController <FBLoginViewDelegate>
 
 @end

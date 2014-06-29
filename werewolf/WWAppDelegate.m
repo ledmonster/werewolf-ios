@@ -8,7 +8,7 @@
 
 #import "WWAppDelegate.h"
 
-#import "WWMasterViewController.h"
+#import "WWTopViewController.h"
 
 @implementation WWAppDelegate
 
@@ -19,9 +19,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Load the FBProfilePictureView
+    // You can find more information about why you need to add this line of code in our troubleshooting guide
+    // https://developers.facebook.com/docs/ios/troubleshooting#objc
+    [FBProfilePictureView class];
+    
+    [FBLoginView class];
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    WWMasterViewController *controller = (WWMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    WWTopViewController *controller = (WWTopViewController *)navigationController.topViewController;
+    // controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 							
@@ -140,6 +147,21 @@
     return _persistentStoreCoordinator;
 }
 
+// In order to process the response you get from interacting with the Facebook login process,
+// you need to override application:openURL:sourceApplication:annotation:
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
+}
+
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.
@@ -147,5 +169,6 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
 
 @end
