@@ -8,7 +8,7 @@
 
 #import "WWAppDelegate.h"
 
-#import "WWTopViewController.h"
+// #import "WWMasterViewController.h"
 
 @implementation WWAppDelegate
 
@@ -26,8 +26,8 @@
     [FBProfilePictureView class];
     
     [FBLoginView class];
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    WWTopViewController *controller = (WWTopViewController *)navigationController.topViewController;
+    // UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    // WWMasterViewController *controller = (WWMasterViewController *)navigationController.topViewController;
     // controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
