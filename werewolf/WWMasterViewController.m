@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Junya Hayashi. All rights reserved.
 //
 
+#import "WWAppDelegate.h"
 #import "WWMasterViewController.h"
-
 #import "WWDetailViewController.h"
 
 @interface WWMasterViewController ()
@@ -29,6 +29,10 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    // ここで良いのか不明だけど通った。
+    WWAppDelegate *appDelegate = (WWAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning

@@ -500,6 +500,7 @@
 				B373AC30195FE15700BC1F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B373AC31195FE15700BC1F15 /* Build configuration list for PBXNativeTarget "werewolfTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +509,7 @@
 				B373AC33195FE15700BC1F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

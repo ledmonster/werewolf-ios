@@ -6,7 +6,9 @@
 //  Copyright (c) 2014年 Junya Hayashi. All rights reserved.
 //
 
+#import "WWAppDelegate.h"
 #import "WWTopViewController.h"
+#import "WWMasterViewController.h"
 
 @interface WWTopViewController ()
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
@@ -69,7 +71,13 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"You're logged in as";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController *obj=[storyboard instantiateViewControllerWithIdentifier:@"Home"];
+    self.navigationController.navigationBarHidden=YES;
+        
+    [self.navigationController pushViewController:obj animated:YES];
+    
+    // self.statusLabel.text = @"You're logged in as";
 }
 
 // Logged-out user experience
